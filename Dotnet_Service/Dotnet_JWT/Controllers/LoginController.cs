@@ -1,4 +1,5 @@
-﻿using Dotnet_Middleware.Authentication;
+﻿using Dotnet_Middleware;
+using Dotnet_Middleware.Authentication;
 using Dotnet_Middleware.Authentication.Jwt;
 using Dotnet_Util.Security;
 using Microsoft.AspNetCore.Authorization;
@@ -13,17 +14,17 @@ namespace Dotnet_JWT.Controllers
         public LoginController(PermissionRequirement permissionRequirement)
         {
             _permissionRequirement = permissionRequirement;
-
+          
         }
         [AllowAnonymous]
         [HttpGet("login")]
         public UnifyApiResult LoginResult(string username, string password)
         { 
             if (string.IsNullOrEmpty(username))
-                return ApiResult.Error("用户名不允许为空。");
+                return UnifyApiResult.Error("用户名不允许为空。");
 
             if (string.IsNullOrEmpty(password))
-                return ApiResult.Error("密码不允许为空。");
+                return UnifyApiResult.Error("密码不允许为空。");
 
             OperatorDAL dal = new OperatorDAL();
             dynamic operatorData = dal.GetUserPwd(username, EncryptionHelper.UserMd5(password));
@@ -38,13 +39,13 @@ namespace Dotnet_JWT.Controllers
                     Role = "admin"
                 };
                 
-                return ApiResult.Sucess(new
+                return UnifyApiResult.Sucess(new
                 {
                     result = operatorData,
                     token = this.Login(data, _permissionRequirement)
                 });
             }
-            return ApiResult.Error("用户名密码输入不正确。");
+            return UnifyApiResult.Error("用户名密码输入不正确。");
         }
 
         [AllowAnonymous]

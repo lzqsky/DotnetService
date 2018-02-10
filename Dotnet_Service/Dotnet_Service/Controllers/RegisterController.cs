@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dotnet_Middleware;
 using Microsoft.AspNetCore.Mvc;
-using ServiceBusiness.DAL;
-using ServiceBusiness.Model;
+using RegistBusiness.DAL; 
 
 namespace Dotnet_Service.Controllers
 {

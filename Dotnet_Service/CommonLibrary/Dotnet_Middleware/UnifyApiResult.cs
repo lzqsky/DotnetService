@@ -21,9 +21,9 @@ namespace Dotnet_Middleware
             return new UnifyApiResult { Code = 500, Msg = msg };
         }
 
-        public static ApiResult PageResult(IEnumerable<dynamic> list, int total)
+        public static UnifyApiResult PageResult(IEnumerable<dynamic> list, int total)
         {
-            return new ApiResult { Code = 200, Data = new PageResult { List = list, Total = total } };
+            return new UnifyApiResult { Code = 200, Data = new PageResult { List = list, Total = total } };
         }
     }
 
