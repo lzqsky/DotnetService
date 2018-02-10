@@ -1,0 +1,381 @@
+﻿{
+  "ReRoutes": [
+    //8001
+    {
+      "DownstreamPathTemplate": "/login",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.12",
+      "DownstreamPort": 8001,
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/logout",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.12",
+      "DownstreamPort": 8001,
+      "UpstreamPathTemplate": "/logout",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/denied",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.12",
+      "DownstreamPort": 8001,
+      "UpstreamPathTemplate": "/denied",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    //8002
+    //operator
+    {
+      "DownstreamPathTemplate": "/base/Operator/FindPageList",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Operator/FindPageList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Operator/Add",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Operator/Add",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Operator/Edit",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Operator/Edit",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Operator/Remove",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Operator/Remove",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    //technician
+    {
+      "DownstreamPathTemplate": "/base/Technician/FindPageList",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Technician/FindPageList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Technician/Add",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Technician/Add",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Technician/Edit",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Technician/Edit",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Technician/Remove",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Technician/Remove",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    //hospital
+    {
+      "DownstreamPathTemplate": "/base/Hospital/FindPageList",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Hospital/FindPageList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Hospital/Add",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Hospital/Add",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Hospital/Edit",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Hospital/Edit",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Hospital/Remove",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Hospital/Remove",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    //contactGroup
+    {
+      "DownstreamPathTemplate": "/base/ContactGroup/FindPageList",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/ContactGroup/FindPageList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/ContactGroup/Add",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/ContactGroup/Add",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/ContactGroup/Edit",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/ContactGroup/Edit",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/ContactGroup/Remove",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/ContactGroup/Remove",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    //register
+    {
+      "DownstreamPathTemplate": "/base/Register/FindPageList",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Register/FindPageList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Register/ExamineVerify",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Register/ExamineVerify",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/base/Register/Remove",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "172.18.0.13",
+      "DownstreamPort": 8002,
+      "UpstreamPathTemplate": "/base/Register/Remove",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "lzqsky",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "UseServiceDiscovery": true,
+    "ServiceDiscoveryProvider": {
+      "Provider": "Consul",
+      "Host": "172.18.0.10",
+      "Port": 8500
+    }
+  }
+}
