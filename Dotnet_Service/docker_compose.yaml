@@ -1,0 +1,47 @@
+﻿#web docker 容器搭建
+version: '2'
+services:
+  consul:
+    image: consul
+    ports:
+     - "8500:8500"
+    command: ["agent","-server","-bootstrap-expect=1","-node=consulServer","-client","0.0.0.0","-ui"]
+    networks:
+      custom_network:
+         ipv4_address: 172.18.0.10
+  gateway:
+    build: ./Dotnet_Ocelot
+    ports:
+     - "8000:8000" 
+    depends_on:
+     - consul
+    networks:
+      custom_network:
+         ipv4_address: 172.18.0.11
+  jwttoken:
+    build: ./Dotnet_JWT
+    ports:
+     - "8001:8001" 
+    depends_on:
+     - consul
+    networks:
+      custom_network:
+         ipv4_address: 172.18.0.12
+  vueserivce:
+    build: ./Dotnet_Service
+    ports:
+     - "8002:8002"
+    depends_on:
+     - consul
+    networks:
+      custom_network:
+         ipv4_address: 172.18.0.13
+
+networks:
+    custom_network:
+        driver: bridge 
+        ipam:
+           driver: default
+           config:
+             - subnet:  172.18.0.0/16
+               gateway: 172.18.0.1

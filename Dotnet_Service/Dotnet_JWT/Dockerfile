@@ -1,8 +1,8 @@
 FROM dotnet
 
-MAINTAINER lzq lzqsky@163.com
+LABEL MAINTAINER = "lzqsky@163.com"
 
-COPY ./app /app/
+COPY ./ /app/
 
 WORKDIR /app
 

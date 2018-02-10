@@ -5,21 +5,26 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet_Service", "Dotnet_Service\Dotnet_Service.csproj", "{2B6F5F26-4C0E-4AB9-8CFC-69A050835EF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet_Ocelot", "Dotnet_Ocelot\Dotnet_Ocelot.csproj", "{D8F70A59-2EE7-47F5-A379-449946D6A52C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet_Ocelot", "Dotnet_Ocelot\Dotnet_Ocelot.csproj", "{D8F70A59-2EE7-47F5-A379-449946D6A52C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet_JWT", "Dotnet_JWT\Dotnet_JWT.csproj", "{8563AAA2-9F53-4B1A-AB74-CBAB23857F79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet_JWT", "Dotnet_JWT\Dotnet_JWT.csproj", "{8563AAA2-9F53-4B1A-AB74-CBAB23857F79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLibrary", "CommonLibrary", "{FAC0CA88-7B02-4CDE-82C7-48ABB92FF29C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet_Middleware", "CommonLibrary\Dotnet_Middleware\Dotnet_Middleware.csproj", "{D10DF61F-6B01-41E1-B415-777B49769BA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet_Middleware", "CommonLibrary\Dotnet_Middleware\Dotnet_Middleware.csproj", "{D10DF61F-6B01-41E1-B415-777B49769BA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet_DataAccess", "CommonLibrary\Dotnet_DataAccess\Dotnet_DataAccess.csproj", "{67ABF172-D6D8-4200-BB14-62A9035156E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet_DataAccess", "CommonLibrary\Dotnet_DataAccess\Dotnet_DataAccess.csproj", "{67ABF172-D6D8-4200-BB14-62A9035156E3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{5C471B5E-E835-4E89-A16D-B30A0AC1E7F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistBusiness", "Business\RegistBusiness\RegistBusiness.csproj", "{5243C952-4228-4154-8D7E-17D2601E9638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistBusiness", "Business\RegistBusiness\RegistBusiness.csproj", "{5243C952-4228-4154-8D7E-17D2601E9638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet_Util", "CommonLibrary\Dotnet_Util\Dotnet_Util.csproj", "{CBEDB0D2-D3A1-419F-8EE3-EA26EB455394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet_Util", "CommonLibrary\Dotnet_Util\Dotnet_Util.csproj", "{CBEDB0D2-D3A1-419F-8EE3-EA26EB455394}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{59F3E001-6F55-4C49-980C-96E0FBB094F7}"
+	ProjectSection(SolutionItems) = preProject
+		docker_compose.yaml = docker_compose.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

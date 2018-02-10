@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\PublishProfiles\DotnetService.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -17,6 +22,12 @@
     <ProjectReference Include="..\CommonLibrary\Dotnet_DataAccess\Dotnet_DataAccess.csproj" />
     <ProjectReference Include="..\CommonLibrary\Dotnet_Middleware\Dotnet_Middleware.csproj" />
     <ProjectReference Include="..\CommonLibrary\Dotnet_Util\Dotnet_Util.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
