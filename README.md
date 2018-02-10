@@ -1,0 +1,2 @@
+# DotnetService
+dotnet core service
